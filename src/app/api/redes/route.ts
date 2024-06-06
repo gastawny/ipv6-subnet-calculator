@@ -1,5 +1,5 @@
 export async function GET(req: Request) {
-  const [{ id }, { asd }] = req.url
+  const [{ bloqueio }, { nSubRedes }] = req.url
     .split("?")[1]
     .split("&")
     .map((x) => {
@@ -9,8 +9,6 @@ export async function GET(req: Request) {
         [key]: value,
       };
     }) as any;
-
-  console.log(id, asd);
 
   return Response.json({
     message: new Date().toISOString(),
