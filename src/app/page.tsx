@@ -53,7 +53,7 @@ export default function Home() {
         IPv6 Subnet Calculator
       </h1>
       <div className="flex justify-center items-center h-auto w-full">
-        <div className="flex flex-col gap-5 2xl:gap-8 border-slate-800 border rounded-md p-4 2xl:p-6 w-2/3 2xl:w-1/2">
+        <div className="flex flex-col gap-5 2xl:gap-8 border-slate-800 border rounded-md p-4 2xl:p-6 w-3/4 2xl:w-3/5">
           <div className="flex gap-8">
             <div className="flex flex-1 flex-col gap-2 items-start">
               <Label>Network address block</Label>
