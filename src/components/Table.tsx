@@ -13,7 +13,7 @@ import { memo } from "react";
 
 function MemoizedTable({ data }: { data: any }) {
   return (
-    <ScrollArea className="h-[22rem] 2xl:h-[28rem]">
+    <ScrollArea className="h-[20rem] 2xl:h-[28rem]">
       <Table>
         <TableHeader>
           <TableRow>
