@@ -75,5 +75,11 @@ export async function GET(req: Request) {
 
   console.log(result);
 
-  return Response.json(result);
+  return Response.json({
+    block,
+    nSubnets: Number(nSubnets),
+    split: block.split("/"),
+    parseInt: parseInt(block.split("/")[1]),
+    maxSubnets: Math.pow(2, 64 - parseInt(block.split("/")[1]) - Number(nSubnets)),
+  });
 }
