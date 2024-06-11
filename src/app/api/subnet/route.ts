@@ -70,5 +70,10 @@ export async function GET(req: Request) {
 
     return subnetsArr;
   }
-  return Response.json(subnetCalculator(block, Number(nSubnets)));
+
+  const result = subnetCalculator(block, Number(nSubnets));
+
+  console.log(result);
+
+  return Response.json(result);
 }
