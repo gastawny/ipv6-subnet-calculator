@@ -75,34 +75,5 @@ export async function GET(req: Request) {
 
   console.log(result);
 
-  return Response.json({
-    map: req.url
-    .split("?")[1]
-    .split("&")
-    .map((x) => {
-      const [key, value] = x.split("=");
-
-      return {
-        [key]: value,
-      };
-    }),
-    decoded: req.url
-    .split("?")[1]
-    .split("&")
-    .map((x) => {
-      const [key, value] = x.split("=");
-
-      return {
-        [key]: decodeURI(value),
-      };
-    }),
-    semiMap: req.url.split("?")[1].split("&"),
-    req: req.url,
-    block: block,
-    nSubnetsStr: nSubnets,
-    nSubnets: Number(nSubnets),
-    split: block.split("/"),
-    parseInt: parseInt(block.split("/")[1]),
-    maxSubnets: Math.pow(2, 64 - parseInt(block.split("/")[1]) - Number(nSubnets)),
-  });
+  return Response.json(result);
 }
