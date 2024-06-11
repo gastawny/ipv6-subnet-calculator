@@ -76,7 +76,8 @@ export async function GET(req: Request) {
   console.log(result);
 
   return Response.json({
-    block,
+    block: block,
+    nSubnetsStr: nSubnets,
     nSubnets: Number(nSubnets),
     split: block.split("/"),
     parseInt: parseInt(block.split("/")[1]),
