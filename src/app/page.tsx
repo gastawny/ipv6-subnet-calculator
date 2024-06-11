@@ -43,7 +43,7 @@ export default function Home() {
   async function handleClick(v: string) {
     setSubnet(subnetOptions.find((x: any) => x.value === v));
     setData(
-      await (await fetch(`/api/subnet?block=${block}&nSubnets=${v}`)).json()
+      await (await fetch(`/api/subnet?block=${encodeURIComponent(block)}&nSubnets=${encodeURIComponent(v)}`)).json()
     );
   }
 

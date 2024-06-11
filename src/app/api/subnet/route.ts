@@ -16,7 +16,7 @@ export async function GET(req: Request) {
       const [key, value] = x.split("=");
 
       return {
-        [key]: value,
+        [key]: decodeURIComponent(value),
       };
     }) as any;
 
